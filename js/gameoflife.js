@@ -42,7 +42,7 @@ const printCells = (state) => {
     for (let x = bottomLeft[0]; x <= topRight[0]; x++) {
       row.push(printCell([x, y], state));
     }
-    string += row.join(" ") + "\n";
+    string += " " + row.join(" ") + "\n";
   }
   return string;
 };
