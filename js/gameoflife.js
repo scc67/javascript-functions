@@ -31,7 +31,15 @@ const corners = (state = []) => {
   }
 };
 
-const printCells = (state) => {};
+const printCells = (state) => {
+  const edge = corners(state);
+  let string = ""
+  for (let y = edge.topRight[1]; y >= edge.bottomLeft[1]; y--) {
+    for (let x = edge.bottomLeft[0]; x <= edge.topRight[0]; x++) {
+      return (x !== edge.topRight[0]) ? string += printCell(x, y) + ' ' : string += printCell(x, y) + '/n'
+    }
+  }
+};
 
 const getNeighborsOf = ([x, y]) => {};
 
